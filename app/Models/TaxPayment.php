@@ -8,5 +8,5 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 class TaxPayment extends Model
 {
     use HasFactory;
-    protected $fillable =['company_name', 'tax_amount', 'status'];
+    protected $fillable =['company_name', 'tax_amount', 'status', 'payment_date'];
 }

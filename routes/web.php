@@ -6,6 +6,7 @@ use App\Http\Controllers\ProductController;
 use App\Http\Controllers\PaymentRequestController;
 use App\Http\Controllers\AllocateController;
 use App\Http\Controllers\TaskPaymentController;
+use App\Http\Controllers\TaxReportController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -16,3 +17,4 @@ Route::get('products', [ProductController::class, 'index']);
 Route::get('process-requests', [PaymentRequestController::class, 'processRequests']);
 Route::get('allocate-budget', [AllocateController::class, 'AlocateBudget']);
 Route::get('/process-tax-payments', [TaskPaymentController::class, 'processPayment']);
+Route::get('/generate-monthly-report', [TaxReportController::class, 'generateMonthlyReport']);
